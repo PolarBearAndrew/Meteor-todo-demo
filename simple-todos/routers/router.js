@@ -1,9 +1,16 @@
 Router.route('/', function() {
-    this.render('hello');
+    this.render('click');
 });
 
-Router.route('/test', function() {
+Router.route('/welcome', function() {
     this.render('welcome');
+});
+
+Router.route('/welcome/:name', function() {
+
+  console.log('name', this.params.name)
+
+  this.render('welcome', { data: { name: this.params.name } });
 });
 
 // Router.route('/items/:_id', function() {

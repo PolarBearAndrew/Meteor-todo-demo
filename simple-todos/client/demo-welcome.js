@@ -4,7 +4,12 @@ Session.setDefault('userName', 'Andrew');
 
 Template.welcome.helpers({
   userName: function () {
-    // console.log('hello helper')
+    // console.log('hello-helper', this)
     return Session.get('userName') + 'Chen';
+  },
+  managerNmae: function() {
+    return this.name
   }
 });
+
+
