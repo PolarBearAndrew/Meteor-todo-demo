@@ -1,0 +1,27 @@
+.job {
+  /*color: red;*/
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0 auto;
+
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+.job:hover {
+  background-color: #DEDEDE
+}
+
+.job span{
+  -webkit-flex: none;
+          flex: none;
+  width: 40px;
+}
+
+.job .text{
+  -webkit-flex: 1;
+          flex: 1;
+}

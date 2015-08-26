@@ -1,18 +1,19 @@
 <template name="todoList">
 
   <center>
-
     <h1>Demo02 todoList</h1>
+  </center>
 
-    {{#each list}}
+  {{#each list}}
 
-    <label class="checkbox-inline">
-      <input type="checkbox" value="{{ id }}" > {{ todo }}
-    </label>
-    <br>
+    <div class="job">
+      <h4>
+        <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+        {{ todo }}
+      </h4>
+    </div>
 
-    {{/each}}
-
-  </center>>
+  {{/each}}
 
 </template>
+

@@ -1,10 +1,10 @@
 
 var init = [
-  { id:'1', todo: '代辦工作 1', done: false  },
-  { id:'2', todo: '代辦工作 2', done: false  },
-  { id:'3', todo: '代辦工作 3', done: false  },
-  { id:'4', todo: '代辦工作 4', done: false  },
-  { id:'5', todo: '代辦工作 5', done: false  }
+  { id:'1', todo: '代辦工作 1' },
+  { id:'2', todo: '代辦工作 2' },
+  { id:'3', todo: '代辦工作 3' },
+  { id:'4', todo: '代辦工作 4' },
+  { id:'5', todo: '代辦工作 5' }
 ];
 
 Session.setDefault('list', init );
@@ -22,7 +22,7 @@ Template.todoList.helpers({
 // events 裡面包裝了這麼模板會使用的事件
 Template.todoList.events({
 
-  'click input': function () {
+  'click span': function () {
 
     // console.log('id', this.id );
     var id = this.id;
@@ -32,14 +32,7 @@ Template.todoList.events({
       return val.id !== id;
     });
 
-    Session.set('list', list );
-  },
-
-  // 'click #sub': function () {
-
-  //   // 將 session 中的 counter - 1
-  //   var num = Session.get('counter');
-  //   Session.set('counter', num - 1);
-  // }
+    return Session.set('list', list );
+  }
 
 });
