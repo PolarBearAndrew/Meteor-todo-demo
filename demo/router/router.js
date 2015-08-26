@@ -2,16 +2,23 @@ Router.route('/', function() {
     this.render('click');
 });
 
-Router.route('/welcome', function() {
-    this.render('welcome');
+// demo 1
+Router.route('/counter', function() {
+
+    this.render('counter');
 });
 
-Router.route('/welcome/:name', function() {
+// dmoe 2
+Router.route('/todoList', function() {
 
-  console.log('name', this.params.name)
-
-  this.render('welcome', { data: { name: this.params.name } });
+    this.render('todoList');
 });
+// Router.route('/welcome/:name', function() {
+
+//   console.log('name', this.params.name)
+
+//   this.render('welcome', { data: { name: this.params.name } });
+// });
 
 // Router.route('/items/:_id', function() {
 //     var item = Items.findOne({

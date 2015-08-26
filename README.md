@@ -1,8 +1,10 @@
 # Meteor-simple-demo
 
-A simple demo for Meteor
+A simple todo-list demo for Meteor
 
-[Meteor Documentation](http://docs.meteor.com/#/basic/)
+* [Meteor Documentation](http://docs.meteor.com/#/basic/)
+* [iron:router](https://atmospherejs.com/iron/router)
+* [ian:accounts-ui-bootstrap-3](https://atmospherejs.com/ian/accounts-ui-bootstrap-3)
 
 ### How to start
 
@@ -12,22 +14,42 @@ $ meteor
 
 ### 資料夾結構
 
-其實 Meteor 的 `.js` 和 `.html` 寫在哪邊並沒太大的差別，所有的資料最後都會被 Meteor 吃進去，命名跟資料夾分類可以隨心所欲。
+Meteor 的 `.js` 和 `.html` 寫在哪邊並沒太大的差別，所有的資料最後都會被 Meteor 吃進去 (但我並不清楚他是否會做 bundle 的動作)，命名跟資料夾分類大致上也沒有規則 `.js` 之間也不需要互相 `import` 或 `require`。言下之意就是 `NPM` 沒有辦法一如以往的在 Meteor 中直接安裝運轉 (我也還不知道可不可以硬是把 node_module 的檔案整個 copy 近來 )。
 
-但注意 client 和 server 資料夾，如果在這兩個資料夾之外的 `.js` 需要使用 ` if( Meteor.isClient )` 或是 `if( Meteor.isServer )` 去分辨這段 code 對於 Meteor 是放置在 client - server 中的哪邊。直接放置在資料夾之下就可以解決這個問題。
+目前的資料夾結構是我個人設計的，狀況如下：
 
+``` bat
+.
+├── client
+│   ├── demo-click.js
+│   └── demo-welcome.js
+├── public
+│   └── css
+│       └── main.css
+├── router
+│   └── router.js
+├── server
+│   └── init.js
+└── template
+    ├── 00_main.html
+    ├── demo-click.html
+    └── demo-welcome.html
+```
 
+只要注意 client 和 server 資料夾，即是代表其資料夾之下的 javascript 檔案最後會跑在 client 或 server 端。
+
+如果在這兩個資料夾之外的 `.js` 需要再將所有的程式碼用 ` if( Meteor.isClient ){ ... }` 或是 `if( Meteor.isServer ){ ... }` 包起來，讓 Meteor 去分辨這段 code 是放置在 client - server 中的哪邊。直接放置在資料夾之下就可以解決這個問題，省去一個很醜的 `if`。
 
 ##### client
 
 ``` js
-Session.setDefault('counter', 0);
+Session.setDefault('counter', 0); //設定一個 session 變數
 
+// counter 這個 func 類似 OOP 中 get 的操作，單純用來取得某個值
 Template.demo.helpers({
   counter: function () {
-    // console.log('demo helper') 
-    // this.name 可以取得從 router 傳過來的 data 物件中的參數
-    return Session.get('counter') + 'hi';
+    // this.name 可以取得從 router 傳過來的 data 物件中的參數 name
+    return Session.get('counter');
   }
 });
 ```
