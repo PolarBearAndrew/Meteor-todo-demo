@@ -1,19 +1,23 @@
 <template name="todoList">
 
-  <center>
-    <h1>Demo02 todoList</h1>
-  </center>
+  <h1>Demo02 todoList</h1>
+  <hr/>
 
   {{#each list}}
 
-    <div class="job">
+    {{> job }}  <!-- 模板的呼叫方式跟變數雷同, 多了一個 > -->
+
+  {{/each}}
+
+</template>
+
+<!-- job 的模板 -->
+<template name="job">
+  <div class="job">
       <h4>
         <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
         {{ todo }}
       </h4>
     </div>
-
-  {{/each}}
-
 </template>
 
