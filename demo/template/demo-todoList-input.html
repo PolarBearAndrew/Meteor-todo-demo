@@ -1,0 +1,14 @@
+<template name="todoList2">
+
+  <h1>Demo03 todoList</h1>
+  <hr/>
+
+  <input class="form-control" type="text" id="todo-input">
+
+  {{#each list}}
+
+    {{> job }}  <!-- 模板的呼叫方式跟變數雷同, 多了一個 > -->
+
+  {{/each}}
+
+</template>

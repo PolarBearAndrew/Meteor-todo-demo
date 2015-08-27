@@ -14,7 +14,11 @@
   background-color: #DEDEDE
 }
 
-.job span{
+.job span {
   width: 40px;
   cursor: pointer;
+}
+
+.todo-input {
+  width: 400px
 }

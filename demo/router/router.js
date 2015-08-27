@@ -1,18 +1,23 @@
-Router.route('/', function() {
-    this.render('click');
-});
+// Router.route('/', function() {
+//     this.render('click');
+// });
 
 // demo 1
 Router.route('/counter', function() {
-
     this.render('counter');
 });
 
 // dmoe 2
 Router.route('/todoList', function() {
-
     this.render('todoList');
 });
+
+// dmoe 3
+Router.route('/todoList2', function() {
+    this.render('todoList2');
+});
+
+
 // Router.route('/welcome/:name', function() {
 
 //   console.log('name', this.params.name)
