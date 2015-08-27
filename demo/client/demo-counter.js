@@ -3,7 +3,6 @@ var counter = 0; // 寫這種一般變數, 是沒有辦法觸發網頁自動更�
 
 Session.setDefault('counter', 0); //設定一個 session 變數
 
-
 // helpers 包裝了 template 裡面所使用的資料的 get function
 Template.counter.helpers({
 

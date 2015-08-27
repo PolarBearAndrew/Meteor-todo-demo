@@ -1,9 +1,18 @@
 body{
   padding: 0px;
+  background-color: #DEDEDE
 }
 
 h1{
   color: blue;
-  width: 300px;
+  width: 600px;
   margin: 0 auto;
+  text-align: center;
+}
+
+h3{
+  color: #333;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }

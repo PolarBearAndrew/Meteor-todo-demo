@@ -1,6 +1,8 @@
-// Router.route('/', function() {
-//     this.render('click');
-// });
+
+// root
+Router.route('/', function() {
+    this.render('welcome');
+});
 
 // demo 1
 Router.route('/counter', function() {
@@ -13,8 +15,8 @@ Router.route('/todoList', function() {
 });
 
 // dmoe 3
-Router.route('/todoList2', function() {
-    this.render('todoList2');
+Router.route('/todoListInput', function() {
+    this.render('todoListInput');
 });
 
 

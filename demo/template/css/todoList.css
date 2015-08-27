@@ -22,3 +22,8 @@
 .todo-input {
   width: 400px
 }
+
+.wrapper{
+  width: 400px;
+  margin: 0 auto;
+}

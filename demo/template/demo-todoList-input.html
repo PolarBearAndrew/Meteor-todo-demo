@@ -1,14 +1,19 @@
-<template name="todoList2">
+<template name="todoListInput">
 
   <h1>Demo03 todoList</h1>
   <hr/>
 
-  <input class="form-control" type="text" id="todo-input">
+  <div class="wrapper">
 
-  {{#each list}}
+    <input id="todo-input" class="form-control" type="text"  >
+    <button id="add" class="btn btn-primary"> Add </button>
 
-    {{> job }}  <!-- 模板的呼叫方式跟變數雷同, 多了一個 > -->
+    {{#each list}}
 
-  {{/each}}
+      {{> job }}  <!-- 模板的呼叫方式跟變數雷同, 多了一個 > -->
+
+    {{/each}}
+
+  </div>
 
 </template>

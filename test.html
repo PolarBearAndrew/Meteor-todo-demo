@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no, target-densityDpi=device-dpi, height=device-height" />
+    <meta name="Title" content="MOON, A story you can turn around whenever you want." />
+    <meta name="keywords" content="ING, ING DIRECT, Unicef, MOON, Moon, Moon the story, children, college, school, trailer, short, short film, 3D, Christmas, Christmas, 2013, web, integral mobile unahistoriaquedalavuelta.com, Chances For Children, Start, Play, history, donation, donate, work, help, school, â¬30raised, go to school for a year, educational program, children, education, access to education, Zambia, Ethiopia, Brazil, India, educational material, interactive story, go to school for an entire year, provide schooling " />
+    <meta name="description" content=" MOON, A story you can turn around whenever you want. An  ING DIRECT and UNICEF Production." />
+    <meta property="og:title" content=" MOON, a story you can turn around whenever you want." />
+    <meta property="og:type" content="non_profit" />
+    <meta property="og:url" content="http://www.unahistoriaquedalavuelta.com/en" />
+    <meta property="og:image" content="http://www.unahistoriaquedalavuelta.com/en/img/shareImage.png" />
+    <meta property="og:site_name" content="MOON, a story you can turn around whenever you want." />
+    <meta property="og:description" content="ING DIRECT and UNICEF presents: MOON, A story you can turn around whenever you want ." />
+    <title>MOON, A story you can turn around whenever you want.</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="webfont/Brandon/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="webfont/geometrical/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/luna.css?nocache=1234">
+    <link rel="stylesheet" type="text/css" href="css/interiores.css?nocache=1">
+    <script src="lib/jquery/jquery-2.0.3.min.js"></script>
+    <script src="lib/pusher/pusher.min.js"></script>
+    <script src="lib/preloadjs/preloadjs-0.4.0.min.js"></script>
+    <script src="lib/gsap/TweenMax.min.js"></script>
+    <script>
+    (function() {
+        var p = [],
+            w = window,
+            d = document,
+            e = f = 0;
+        p.push('ua=' + encodeURIComponent(navigator.userAgent));
+        e |= w.ActiveXObject ? 1 : 0;
+        e |= w.opera ? 2 : 0;
+        e |= w.chrome ? 4 : 0;
+        e |= 'getBoxObjectFor' in d || 'mozInnerScreenX' in w ? 8 : 0;
+        e |= ('WebKitCSSMatrix' in w || 'WebKitPoint' in w || 'webkitStorageInfo' in w || 'webkitURL' in w) ? 16 : 0;
+        e |= (e & 16 && ({}.toString).toString().indexOf("\n") === -1) ? 32 : 0;
+        p.push('e=' + e);
+        f |= 'sandbox' in d.createElement('iframe') ? 1 : 0;
+        f |= 'WebSocket' in w ? 2 : 0;
+        f |= w.Worker ? 4 : 0;
+        f |= w.applicationCache ? 8 : 0;
+        f |= w.history && history.pushState ? 16 : 0;
+        f |= d.documentElement.webkitRequestFullScreen ? 32 : 0;
+        f |= 'FileReader' in w ? 64 : 0;
+        p.push('f=' + f);
+        p.push('r=' + Math.random().toString(36).substring(7));
+        p.push('w=' + screen.width);
+        p.push('h=' + screen.height);
+        var s = d.createElement('script');
+        s.src = 'lib/whichbrowser/detect.js?' + p.join('&');
+        d.getElementsByTagName('head')[0].appendChild(s);
+    })();
+    </script>
+    <script src="src/GLOBALS.js"></script>
+    <script src="src/LUNA.js?nocache=4"></script>
+    <script src="src/ANIM.js?nocache=3"></script>
+    <script src="src/UI.js?nocache=3"></script>
+    <script src="src/NET.js?nocache=3"></script>
+    <script src="src/UTILS.js"></script>
+    <script src="src/PRELOAD.js"></script>
+</head>
+
+<body>
+    <div id="debug"></div>
+    <div id="preload" class="preload">
+        <div class="loading"><img src="img/loading.gif" alt=""></div>
+    </div>
+    <div class="horizontalHint" id="horizontalHint">
+        <div class="hint">
+            <div class="icono"><img src="img/iconoMovil.png" alt=""></div>
+            <div class="texto">place your mobile in
+                <br />a horizontal position</div>
+        </div>
+    </div>
+    <div class="interiores" id="interiores">
+        <div class="fondoInteriores"></div>
+        <div class="botCerrar"><img src="img/botVolver.png" alt="Volver" /></div>
+        <div class="interior interiorInstrucciones" id="interiorInstrucciones">
+            <div class="titulo">HOW IT WORKS</div>
+            <div class="texto texto1">LUNA is an interactive story that you can turn around whenever you want using your mobile.</div>
+            <div class="texto texto2">To watch it, all you have to do is follow these steps:</div>
+            <div class="paso paso1"><img src="img/interiorInstrucciones1.png" alt=""></div>
+            <div class="paso paso2"><img src="img/interiorInstrucciones2.png" alt=""></div>
+            <div class="paso paso3"><img src="img/interiorInstrucciones3.png" alt=""></div>
+            <div class="paso paso4"><img src="img/interiorInstrucciones4.png" alt=""></div>
+            <div class="paso paso5"><img src="img/interiorInstrucciones5.png" alt=""></div>
+        </div>
+        <div class="interior interiorColabora" id="interiorColabora">
+            <div class="titulo">Donate
+                <br />to UNICEF</div>
+            <div class="texto texto1">For every â¬30 raised, a child can go to school for an entire year</div>
+            <div class="siEres heading">If you are an
+                <br />ING DIRECT customer</div>
+            <div class="introBotones intro1">Go to <a href="http://www.ingdirect.es" target="_blank">ingdirect.es</a> and enter your
+                <br />password to make a donation.</div>
+            <div class="boton botonPersonal">
+                <div class="texto">PERSONAL BANKING</div>
+                <div class="flecha"><img src="img/flechaColabora.png" alt=""></div>
+                <div class="clear"></div>
+            </div>
+            <div class="boton botonNegocios">
+                <div class="texto">BUSINESS BANKING</div>
+                <div class="flecha"><img src="img/flechaColabora.png" alt=""></div>
+                <div class="clear"></div>
+            </div>
+            <div class="separador"></div>
+            <div class="siNoEres heading">If you are not yet an
+                <br />ING DIRECT customer</div>
+            <div class="introBotones intro2">You can make a donation to UNICEF
+                <br />through account number:</div>
+            <div class="boton botonCuenta">
+                <div class="textoBig">1465 0100 93 6000122707</div>
+            </div>
+            <div class="separador"></div>
+            <div class="legalColabora">Please note that your data will be transferred to UNICEF for the sole purpose that they can send the certificate donations. This transfer of data by ING DIRECT to UNICEF is necessary for you to receive the certificate. We also inform you that you may exercise your rights of access, rectification, cancellation and opposition of your data, to ING DIRECT by writing to the Department of Communication at ING DIRECT NV, Branch in Spain, C / Severo Ochoa, 2 Park Company Madrid-Las Rozas, 28232 Las Rozas (Madrid) or via phone 901 105115, and in the case of UNICEF by email to unicef@unicef.es or by written and signed request to UNICEF Spain, NIF : G84451087 C / Mauricio Legendre, 36 28046 Madrid.</div>
+        </div>
+        <div class="interior interiorChances" id="interiorChances">
+            <div class="titulo">What is
+                <br />ING Chances
+                <br />for Children?</div>
+            <div class="texto texto1">ING Chances for Children is a programme run by the ING Group in collaboration with UNICEF to guarantee children's right to education.</div>
+            <div class="texto texto2">We have worked in countries including India, Zambia, Ethiopia and Brazil, to help provide schooling for more than 783,000 children by supplying educational material, building schools and training teachers.</div>
+            <div class="texto texto3">But there is still a long way to go. There are still 57 million children who do not go to school or who receive sporadic or insufficient education.</div>
+            <div class="imagenCierre"><img src="img/imagenCierreChances.png" alt=""></div>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="botones">
+            <div class="elemMenu logoING"><img src="img/logoING.png" alt=""></div>
+            <div class="elemMenu botMenu"><img src="img/botMenu.png" alt="Menu"></div>
+            <div class="elemMenu logoUnicef"><img src="img/logoUnicef.png" alt=""></div>
+            <div class="clear"></div>
+        </div>
+        <div class="botSecciones">
+            <div class="boton botInstrucciones" data-interior="Instrucciones">HOW IT WORKS</div>
+            <div class="boton botColabora" data-interior="Colabora">MAKE A DONATION TO UNICEF</div>
+            <div class="boton botChances" data-interior="Chances">WHAT IS ING CHANCES FOR CHILDREN?</div>
+        </div>
+    </div>
+    <div id="debug"></div>
+    <div class="mainContent">
+        <div id="home" class="home">
+            <div class="fondo"></div>
+            <div class="logo"><img src="img/logoLuna.png" alt="Luna" /></div>
+            <div class="form">
+                <form id="sendingCode">
+                    <input type="text" name="code" id="code" data-default="ENTER YOUR CODE HERE" value="ENTER YOUR CODE HERE" maxlength="5" />
+                    <div class="botSendCode" id="sendCode">SEND</div>
+                    <div class="botEnviando" id="botEnviando"><img src="img/loadingEnviar.gif" alt=""></div>
+                    <div class="clear"></div>
+                </form>
+            </div>
+            <div class="descripcion">Do you still need a code?
+                <br />Go to unahistoriaquedalavuelta.com/en
+                <br />from your computer.</div>
+        </div>
+        <div class="syncing" id="syncing">
+            <div class="texto">Synchronising
+                <br />your COMPUTER WITH YOUR MOBILE</div>
+            <div class="animacion"><img src="img/animSincro.gif" alt="Synchronising..."></div>
+        </div>
+        <div id="instructions" class="instructions">
+            <div class="texto">YA ESTÃ. Gira tu mÃ³vil CADA VEZ
+                <br />QUE QUIERAS DARLE LA VUELTA A LA HISTORIA.</div>
+            <div class="animacion"><img src="img/animInstructions.gif" alt="Gira el mÃ³vil"></div>
+        </div>
+        <div class="play" id="play">
+            <div class="reproducir"><img src="img/play.png" /></div>
+        </div>
+        <div class="rotation" id="rotation">
+            <div class="buffer">
+                <div class="loading"><img src="img/loadingVideo.gif" alt=""></div>
+            </div>
+            <div class="playing">
+                <div class="separador"></div>
+                <div class="sad" id="sad"><img src="img/sad.png" alt=""></div>
+                <div class="happy" id="happy"><img src="img/happy.png" alt=""></div>
+            </div>
+            <div class="rotando" id="rotando">
+                <div class="flechas"><img src="img/flechasRot.png"></div>
+                <div class="textoRotando">TURNING
+                    <br />THE STORY
+                    <br />AROUND</div>
+            </div>
+        </div>
+        <div class="end" id="end">
+            <div class="botones">
+                <div class="boton botDonar">
+                    <div class="imagen"><img src="img/botDonar.png" alt="MAKE A DONATION"></div>
+                    <div class="texto">MAKE A DONATION</div>
+                </div>
+                <div class="boton botVolver">
+                    <div class="imagen"><img src="img/botVolverVer.png" alt="REPLAY"></div>
+                    <div class="texto">REPLAY</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="badMobile" id="badMobile">
+        <div class="content">
+            <div class="icon"><img src="img/badMobile.png" alt=""></div>
+            <div class="texto">Your mobile does not have
+                <br />the technology needed
+                <br />to watch
+                <br />the story.</div>
+            <div class="intenta">Try using a different smartphone.</div>
+        </div>
+    </div>
+</body>

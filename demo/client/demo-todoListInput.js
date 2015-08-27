@@ -7,19 +7,25 @@ var init = [
 ];
 
 Session.setDefault('list', init );
+Session.setDefault('temp', '' ); // temp for input
 
 
-Template.todoList.helpers({
+Template.todoListInput.helpers({
 
   // 取得待辦清單
   list: function () {
     return Session.get('list');
+  },
+
+  //temp for input
+  temp: function () {
+    return Session.get('temp');
   }
 });
 
 
 // events 裡面包裝了這麼模板會使用的事件
-Template.todoList.events({
+Template.todoListInput.events({
 
   // 完成工作
   'click span': function () {
@@ -33,5 +39,26 @@ Template.todoList.events({
     });
 
     return Session.set('list', list );
+  },
+
+  // 新增工作
+  'change #todo-input': function ( obj ) {
+
+    return Session.set('temp', obj.target.value);
+  },
+
+  // 新增工作
+  'click #add': function () {
+
+    var lastJob = 0, list = Session.get('list');
+    lastJob = list[list.length - 1] || {} ; // last one id
+
+    list.push({
+      id:  lastJob.id || 0, //be next one
+      todo: Session.get('temp')
+    });
+
+    return Session.set('list', list );
   }
+
 });
